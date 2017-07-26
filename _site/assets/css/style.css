@@ -1,0 +1,88 @@
+body {
+    background: url('../images/squiggles.jpg');
+    background-size: cover;    
+    font-family: monospace !important;
+}
+
+.app {
+    margin: 2rem 0;
+    padding:2rem;
+    background: #fff;
+}
+
+.header {
+    width: 100%;
+}
+
+.header .side {
+    margin-left: 0;
+}
+
+.header .side .link {
+    background: #ccc;
+    padding: 3px;
+    display: inline-block;
+    margin: 10px;
+}
+    
+
+.header h1 {
+    border: 5px solid #000;
+    display: inline-block;
+    padding: 20px;
+    background: url('../images/squiggles.jpg');
+    color: #fff;
+}
+
+.header .overlay {
+    width: 100%;
+    background: rgba(0,0,0,1);
+    padding: 20px;
+}
+
+.header span {
+    display: inline-block;
+    font-size:16px;
+}
+
+.content .blog-post-listing .date {
+    background: aliceblue;
+    padding:3px;
+    color: #000;
+}
+
+.content {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+
+.fr {
+    float: right;
+    text-align: left;
+    width: 50%;
+}
+
+.fl {
+    float: left;
+}
+
+.menu-btn {
+    display: none;
+}
+
+@media (max-width: 400px) {
+    .header .side {
+        display: none;
+    }
+
+    .menu-btn {
+    display: inline-block;
+    text-align: right;
+    background: #f6f6f6;
+    float: right;
+    padding: 3px;
+    margin-bottom: -21px;
+    margin-top: -10px;
+    }
+}

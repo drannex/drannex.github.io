@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="{{ "/assets/style.css" | absolute_url }}">
+    <link rel="stylesheet" href="{{ "/assets/coolgrids.css" | absolute_url }}">
+
+    {% if page.title %}
+        <title>{{ page.title }} by Macleod Sawyer</title>
+        <meta property="og:title" content="{{ page.title }} by Macleod Sawyer" />
+
+        {% if page.description %}
+            <meta name="description" content="{{ page.description}}">
+            <meta property="og:description" content="{{ page.description}}" />
+        {% else %}
+            <meta name="description" content="{{ page.content | truncate: 100 | strip_html}}">
+            <meta property="og:description" content="{{ page.content | truncate: 100 | strip_html}}" />
+        {% endif %}
+    {% else %}
+        <title>{{ site.name }}</title>
+        <meta name="description" content="{{ site.description }}">
+    {% endif %}
+    
+    {% if page.image %}
+        <meta property="og:image" content="{{ page.image }}" />
+    {% else %}
+        <meta property="og:image" content="/assets/img/15940676_10206328677334647_3195620230118504649_n[1].jpg" />
+    {% endif %}
+
+    {% if site.google_verification %}
+        <meta name="google-site-verification" content="{{ site.google_verify }}">
+    {% endif %}
+
+    <link rel="icon" href="/assets/img/favicon.png">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@MacleodSawyr" />
+ 
+<body>
+<div class="app">
+    <div class="header">
+        <div class="row">
+            <div class="one-half column">
+                <h1><div class="overlay">
+                never not thinking
+                <br>
+                <span>this blog was created in 2017 by macleod sawyer</span>
+                </div></h1>
+            </div>
+            <div class="one-half column side">
+                <a class="link" style="color: #fff; background: #1da1f2" href="https://twitter.com/macleodsawyr">follow me: @macleodsawyr</a>
+                <a class="link" style="color: #fff; background: #000" href="mailto:macleod@macleodsawyer.com">email me</a>
+                <a class="link" href="https://twitter.com/macleodsawyr">you can learn all about me and my boring adventures if you click here</a>
+                <div class="bio">
+                    <p>I've had a company acquired, have a million followers, been signed to a record label, nonstop ppolitical activist (raised $$50k for political causes and had 5+ people be elected to public office), business and marketing consultant - also a millenial (1997 born lets rock)</p>
+                </div>
+            </div>
+            <div class="menu-btn">open menu</div>
+        </div>
+    </div>
+    
+    {{ content }}
+    
+</div>
+
+</body>
+
+</html>
