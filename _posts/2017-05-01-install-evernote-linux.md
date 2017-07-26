@@ -1,6 +1,8 @@
 ---
 published: true
 title: Installing Evernote in Linux Using Wine (May 2017)
+layout: post
+
 ---
 I use Evernote a lot. It keeps all my thoughts, log journals, experiments, tests, code pieces (bash aliases, etc), personal simulation philisophy, thought pieces, articles, and more. 
 

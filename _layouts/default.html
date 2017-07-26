@@ -49,15 +49,15 @@
                 <span>this blog was created in 2017 by macleod sawyer</span>
                 </div></h1>
             </div></a>
-            <div class="one-half column side">
+            <div class="one-half column side" id="nav">
                 <a class="link" style="color: #fff; background: #1da1f2" href="https://twitter.com/macleodsawyr">follow me: @macleodsawyr</a>
                 <a class="link" style="color: #fff; background: #000" href="mailto:macleod@macleodsawyer.com">email me</a>
-                <a class="link" href="https://twitter.com/macleodsawyr">you can learn all about me and my boring adventures if you click here</a>
+                <a class="link" href="/about">you can learn all about me and my boring adventures if you click here</a>
                 <div class="bio">
-                    <p>I've had a company acquired, have a million followers, been signed to a record label, nonstop ppolitical activist (raised $$50k for political causes and had 5+ people be elected to public office), business and marketing consultant - also a millenial (1997 born lets rock)</p>
+                    <p>I've had a company acquired, have a million followers, been signed to a record label, nonstop political activist (raised $$50k for political causes and had 5+ people be elected to public office), business and marketing consultant - also a millenial (1997 born lets rock)</p>
                 </div>
             </div>
-            <div class="menu-btn">open menu</div>
+            <div class="menu-btn" onclick="show_menu()" id="menu-btn">open menu</div>
         </div>
     </div>
     
@@ -65,6 +65,16 @@
     
 </div>
 
-</body>
+<script> 
+function show_menu() {
+    var x = document.getElementById('nav');
+    if (x.style.display === 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+} 
+</script>
 
+</body>
 </html>

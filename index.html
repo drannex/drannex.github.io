@@ -2,7 +2,18 @@
 layout: default
 ---
 <div class="content">
-    {% for post in site.posts %}
+    {% for post in site.posts limit:1 %}
+        <div class="blog-post-listing">
+            <a href="{{ post.url }}"><h1>{{ post.title }}</h1></a>
+            <p><img src="assets/images/new.gif"><span class="date">{{ post.date | date: '%d-%b-%Y' }}</span> 
+               {{ post.content | split:'<!--break-->' | first }}
+                {% if post.content contains '<!--break-->' %}
+                    <a href="{{ post.url }}">read more</a>
+                {% endif %}
+                </p>
+        </div>
+    {% endfor %}
+    {% for post in site.posts offset:1 %}
         <div class="blog-post-listing">
             <a href="{{ post.url }}"><h1>{{ post.title }}</h1></a>
             <p><span class="date">{{ post.date | date: '%d-%b-%Y' }}</span> 

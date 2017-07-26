@@ -2,6 +2,7 @@
 published: true
 title: 'How to fix frozen, bricked, or bootlooped Kindle devices.'
 image: 'https://i.imgur.com/2XtrkZh.jpg'
+layout: post
 ---
 My device kept bootlooping **and would not** allow me to read anything so I spent the last several days digging through forums, reddits, comment threads, and dozens of articles on repairing my frozen bootlooped Kindle Paperwhite. 
 
