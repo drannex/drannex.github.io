@@ -7,9 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="stylesheet" href="/assets/css/coolgrids.css">
+    <link rel="stylesheet" href="/assets/css/animate.css">
 
     {% if page.title %}
-        <title>{{ page.title }} by Macleod Sawyer</title>
+        <title>{{ page.title }} {% if page.index %} {% else %} by Macleod Sawyer {% endif %}</title>
         <meta property="og:title" content="{{ page.title }} by Macleod Sawyer" />
 
         {% if page.description %}
@@ -62,8 +63,12 @@
     </div>
     
     {{ content }}
-    
 </div>
+
+    <div class="footer">
+        <a class="turtle-a"><img class="turtle-bottom animated tada" src="/assets/images/turtle.png"></a>
+        <p>copyleft 2017 macleod sawyer please ask permission for reuse (also required to pet the turtle)</p>
+    </div>
 
 <script> 
 function show_menu() {
@@ -74,6 +79,12 @@ function show_menu() {
         x.style.display = 'none';
     }
 } 
+
+$('.turtle-a').click(function(){ 
+            $('.turtle-bottom').toggleClass("animated tada",function(){
+               $(this).remove();
+            });
+        });       
 </script>
 
 </body>
